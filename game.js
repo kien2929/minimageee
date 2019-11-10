@@ -66,13 +66,13 @@ document.addEventListener('keydown', function (event) {
         pad.isMovingRight = true;
     } else if (event.keyCode == 32) {
         ball.isMoving = true;
-        if (isGameOver) { window.location.reload(); }
+        if (isGameOver) { window.location.reload(false); }
     }
 })
 
 document.getElementById("begin").onclick = function () {
     ball.isMoving = true;
-    if (isGameOver) { window.location.reload(); }
+    if (isGameOver) { window.location.reload(false); }
 };
 
 
