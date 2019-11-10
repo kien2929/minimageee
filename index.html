@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mini game</title>
+    <style>
+        canvas {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="border:1px solid green; width: 200px;height: 500px; float: left;text-align: center;">
+        <div style="font-size: 40px;"><span style='color:rgb(245, 214, 214); text-shadow:0 0 2px red;'>Score:
+            </span><span id="score">0</span></div>
+        <hr>
+        <br>
+        <div style="font-size: 25px;">Move left <img
+                src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/512x512/shadow/keyboard_key_left.png"
+                height="23px"></div>
+        <br>
+        <br>
+        <br>
+        <div style="font-size: 25px;">Move right <img
+                src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/512x512/shadow/keyboard_key_right.png"
+                height="23px"></div>
+        <br>
+        <br>
+        <br>
+        <div style="font-size: 25px;">Start <img
+                src="https://www.pngkey.com/png/full/9-92872_key-space-icon-space-key-png.png" height="23px"></div>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <div id="status" style="font-size: 45px;color:red; text-shadow:0 0 10px red;">
+            LET GO !!!
+        </div>
+    </div>
+    <canvas id="game" width=500 height=500></canvas>
+    <script src="game.js"></script>
+</body>
+
+</html>
