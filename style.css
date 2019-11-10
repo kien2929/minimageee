@@ -2,5 +2,9 @@
   max-width: 100%;
 }
 .panel-small {
-    max-width: 100%;
-  }
+  max-width: 100%;
+}
+.btn{
+    font-size: 44px;
+    width: 30%;
+}
