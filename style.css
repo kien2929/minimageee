@@ -4,7 +4,12 @@
 .panel-small {
   max-width: 100%;
 }
-.btn{
-    font-size: 44px;
+.arrow{
+    font-size: 60px;
     width: 30%;
+}
+.play{
+    font-size: 60px;
+    width: 30%;
+}
 }
