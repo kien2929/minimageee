@@ -66,17 +66,21 @@ document.addEventListener('keydown', function (event) {
         pad.isMovingRight = true;
     } else if (event.keyCode == 32) {
         ball.isMoving = true;
+        if (isGameOver) { window.location.reload(); }
     }
 })
 
-document.getElementById("begin").onclick = function () { ball.isMoving = true; };
+document.getElementById("begin").onclick = function () {
+    ball.isMoving = true;
+    if (isGameOver) { window.location.reload(); }
+};
 
 
 document.getElementById("left").ontouchstart = function () {
     pad.isMovingLeft = true;
 };
 document.getElementById("left").ontouchend = function () {
-    pad.isMovingLeft =false;
+    pad.isMovingLeft = false;
 };
 document.getElementById("right").ontouchstart = function () {
     pad.isMovingRight = true;
@@ -162,10 +166,10 @@ function checkGameOver() {
 }
 function handleGameOver() {
     if (isGameWin) {
-        notif.innerHTML = 'YOU WIN !!!';
+        notif.innerHTML = 'YOU WIN';
         document.getElementById('status-small').innerHTML = 'YOU WIN !!!';
     } else {
-        notif.innerHTML = 'YOU LOSE !!!';
+        notif.innerHTML = 'YOU LOSE';
         document.getElementById('status-small').innerHTML = 'YOU LOSE !!!';
     }
 }
