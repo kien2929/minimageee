@@ -23,11 +23,11 @@ var ball = {
 }
 
 var BrickConfig = {
-    offsetx: 25,
+    offsetx: canvas.width*5/100,
     offsety: 25,
-    margin: 25,
+    margin: canvas.width*5/100,
     height: 15,
-    width: 70,
+    width: canvas.width*14/100,
     row: 4,
     col: 5
 }
