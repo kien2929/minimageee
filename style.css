@@ -1,3 +1,6 @@
 .canvas {
   max-width: 100%;
 }
+.panel-small {
+    max-width: 100%;
+  }
