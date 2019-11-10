@@ -72,16 +72,16 @@ document.addEventListener('keydown', function (event) {
 document.getElementById("begin").onclick = function () { ball.isMoving = true; };
 
 
-document.getElementById("left").onmousedown = function () {
+document.getElementById("left").ontouchstart = function () {
     pad.isMovingLeft = true;
 };
-document.getElementById("left").onmouseup = function () {
+document.getElementById("left").ontouchend = function () {
     pad.isMovingLeft =false;
 };
-document.getElementById("right").onmousedown = function () {
+document.getElementById("right").ontouchstart = function () {
     pad.isMovingRight = true;
 };
-document.getElementById("right").onmouseup = function () {
+document.getElementById("right").ontouchend = function () {
     pad.isMovingRight = false;
 };
 
