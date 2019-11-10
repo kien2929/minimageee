@@ -18,9 +18,10 @@
 
 <body>
     <div class="container-fluid">
-        <div class="panel-small .visible-sm-block, hidden-sm .visible-md-block, hidden-md  .visible-lg-block, hidden-lg" style="border:1px solid green; width: 500px;height: 20px;text-align: center;">
-                <div style="font-size: 15px;"><span style='color:red; text-shadow:0 0 2px red;'>Score:
-                    </span><span id="score">0</span></div>
+        <div class="panel-small .visible-sm-block, hidden-sm .visible-md-block, hidden-md  .visible-lg-block, hidden-lg"
+            style="border:1px solid green; width: 500px;height: 20px;text-align: center;">
+            <div style="font-size: 15px;"><span style='color:red; text-shadow:0 0 2px red;'>Score:
+                </span><span id="score-small">0</span></div>
         </div>
         <div class="panel-item .visible-xs-block, hidden-xs "
             style="border:1px solid green; width: 200px;height: 500px; float: left;text-align: center;">
@@ -52,10 +53,17 @@
             </div>
         </div>
         <canvas class="canvas" id="game" width=498 height=498></canvas>
-        <div class="panel-small .visible-sm-block, hidden-sm .visible-md-block, hidden-md  .visible-lg-block, hidden-lg" style=" width: 500px;height: 30px;text-align: center;">
-                <button class="btn btn-success ">&nbsp; &#171; &nbsp;</button>
-                <button class="btn">Play</button>
-                <button class="btn btn-success ">&nbsp; &#187; &nbsp;</button>
+        <div class="panel-small .visible-sm-block, hidden-sm .visible-md-block, hidden-md  .visible-lg-block, hidden-lg"
+            style=" width: 500px;height: 30px;text-align: center;">
+            <button id="left" class="btn btn-success ">&nbsp; &#171; &nbsp;</button>
+            <button id="begin" class="btn">PLAY</button>
+            <button id="right" class="btn btn-success ">&nbsp; &#187; &nbsp;</button>
+        </div>
+        <div class="panel-small .visible-sm-block, hidden-sm .visible-md-block, hidden-md  .visible-lg-block, hidden-lg"
+            style=" width: 500px;text-align: center;">
+            <div id="status-small" style="font-size: 35px;color:red; text-shadow:0 0 10px red;">
+                    LET GO !!!
+                </div>
         </div>
         <script src="game.js"></script>
     </div>

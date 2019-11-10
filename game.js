@@ -23,11 +23,11 @@ var ball = {
 }
 
 var BrickConfig = {
-    offsetx: canvas.width*5/100,
+    offsetx: canvas.width * 5 / 100,
     offsety: 25,
-    margin: canvas.width*5/100,
+    margin: canvas.width * 5 / 100,
     height: 15,
-    width: canvas.width*14/100,
+    width: canvas.width * 14 / 100,
     row: 4,
     col: 5
 }
@@ -58,6 +58,7 @@ document.addEventListener('keyup', function (event) {
     }
 })
 
+
 document.addEventListener('keydown', function (event) {
     if (event.keyCode == 37) {
         pad.isMovingLeft = true;
@@ -67,6 +68,25 @@ document.addEventListener('keydown', function (event) {
         ball.isMoving = true;
     }
 })
+
+document.getElementById("begin").onclick = function () { ball.isMoving = true; };
+
+
+document.getElementById("left").onclick = function () {
+    if (!ball.isMoving) {
+        ball.x -= pad.speed;
+        if (ball.x < pad.width / 2) { ball.x = pad.width / 2 } else if (ball.x > canvas.width - pad.width / 2) { ball.x = canvas.width - pad.width / 2 }
+    }
+    pad.x -= pad.speed;
+};
+document.getElementById("right").onclick = function () {
+    if (!ball.isMoving) {
+        ball.x += pad.speed;
+        if (ball.x < pad.width / 2) { ball.x = pad.width / 2 } else if (ball.x > canvas.width - pad.width / 2) { ball.x = canvas.width - pad.width / 2 }
+    }
+    pad.x += pad.speed;
+};
+
 
 
 function drawBall() {
@@ -145,10 +165,10 @@ function checkGameOver() {
 function handleGameOver() {
     if (isGameWin) {
         notif.innerHTML = 'YOU WIN !!!';
-        console.log('you win');
+        document.getElementById('status-small').innerHTML = 'YOU WIN !!!';
     } else {
         notif.innerHTML = 'YOU LOSE !!!';
-        console.log('you lose');
+        document.getElementById('status-small').innerHTML = 'YOU LOSE !!!';
     }
 }
 
@@ -178,6 +198,7 @@ function startBall() {
 }
 function updateScore() {
     score.innerHTML = `${userScore}`;
+    document.getElementById('score-small').innerHTML = `${userScore}`;
 }
 
 function draw() {
