@@ -17,8 +17,8 @@ var ball = {
     x: pad.x + pad.width / 2,
     y: pad.y - 10,
     radius: 10,
-    dx: 5,
-    dy: 2,
+    dx: 6,
+    dy: 3,
     isMoving: false
 }
 
@@ -193,8 +193,8 @@ function startBall() {
     }
     else {
         if (ball.dx == 0) {
-            ball.dx = 5;
-            ball.dy = 2;
+            ball.dx = 6;
+            ball.dy = 3;
         }
     }
 }
