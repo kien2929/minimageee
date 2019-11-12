@@ -204,7 +204,7 @@ function updateScore() {
 }
 ////////////////////////////
 var time_stamp = 0; // Or Date.now()
-window.addEventListener("touchstart", function(event) {
+window.addEventListener("touchstart", function (event) {
     if (event.timeStamp - time_stamp < 300) { // A tap that occurs less than 300 ms from the last tap will trigger a double tap. This delay may be different between browsers.
         event.preventDefault();
         return false;
@@ -221,6 +221,8 @@ function draw() {
         drawPad();
         drawBrick();
         startBall();
+        ///
+        requestAnimationFrame(draw);
         handleBallBound();
         handleBallPad();
         handleBallBrick();
@@ -229,8 +231,7 @@ function draw() {
         updatePadPosition();
         updateBallPosition();
         checkGameOver();
-        requestAnimationFrame(draw);
-
+        ///
     } else {
         handleGameOver();
     }
