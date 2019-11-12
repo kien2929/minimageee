@@ -222,7 +222,7 @@ function draw() {
         drawBrick();
         startBall();
         ///
-        requestAnimationFrame(draw);
+        
         handleBallBound();
         handleBallPad();
         handleBallBrick();
@@ -231,6 +231,7 @@ function draw() {
         updatePadPosition();
         updateBallPosition();
         checkGameOver();
+        requestAnimationFrame(draw);
         ///
     } else {
         handleGameOver();
