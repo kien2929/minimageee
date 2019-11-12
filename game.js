@@ -2,6 +2,9 @@ var canvas = document.getElementById('game');
 var score = document.getElementById('score');
 var notif = document.getElementById('status');
 var context = canvas.getContext('2d');
+var leftKeycode = 37;
+var rightKeycode = 39;
+var spaceKeycode = 32;
 
 var color = ['#e6194B', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#42d4f4', '#f032e6', '#bfef45', '#fabebe', '#469990', '#e6beff', '#9A6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#a9a9a9'];
 var pad = {
@@ -51,20 +54,20 @@ var userScore = 0;
 var maxScore = BrickConfig.col * BrickConfig.row;
 
 document.addEventListener('keyup', function (event) {
-    if (event.keyCode == 37) {
+    if (event.keyCode == leftKeycode) {
         pad.isMovingLeft = false;
-    } else if (event.keyCode == 39) {
+    } else if (event.keyCode == rightKeycode) {
         pad.isMovingRight = false;
     }
 })
 
 
 document.addEventListener('keydown', function (event) {
-    if (event.keyCode == 37) {
+    if (event.keyCode == leftKeycode) {
         pad.isMovingLeft = true;
-    } else if (event.keyCode == 39) {
+    } else if (event.keyCode == rightKeycode) {
         pad.isMovingRight = true;
-    } else if (event.keyCode == 32) {
+    } else if (event.keyCode == spaceKeycode) {
         ball.isMoving = true;
         if (isGameOver) { window.location.reload(false); }
     }
